@@ -1,0 +1,22 @@
+.a {
+  background-color: red;
+  position: relative;
+  animation-name: transform;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  --start-x: 0px;
+  --start-y: 0px;
+  --end-x: 200px;
+  --end-y: 0px;
+}
+
+@keyframes transform {
+  0% {
+    background-color: red;
+    transform: translate(var(--start-x), var(--start-y));
+  }
+  100% {
+    background-color: yellow;
+    transform: translate(var(--end-x), var(--end-y));
+  }
+}
