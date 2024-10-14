@@ -2,7 +2,7 @@ import React from "react";
 import MainHeader from "./MainHeader";
 function HomePage() {
   return (
-    <div>
+    <div className="bg-sl">
       <MainHeader
         title="Animation"
         nav="Animation"
@@ -12,6 +12,11 @@ function HomePage() {
       <MainHeader
         title="Login"
         nav="Login"
+        details="In this module the user can create account and login this module includes validation and verification and responsive design"
+      />
+      <MainHeader
+        title="New Component"
+        nav=""
         details="In this module the user can create account and login this module includes validation and verification and responsive design"
       />
       <br></br>

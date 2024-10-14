@@ -100,7 +100,7 @@ function Animation() {
     <div className="px-40 py-10">
       <div className="w-full border border-black h-[500px] relative">
         <motion.div
-          className={`border-2 border-black sticky`}
+          className={`border-2 border-black absolute`}
           style={AttributesStyle}
           animate={{
             x: [0, transX, 0],

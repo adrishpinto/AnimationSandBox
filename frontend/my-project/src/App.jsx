@@ -5,6 +5,7 @@ import "./App.css";
 import Animation from "./component/Animation";
 import HomePage from "./component/HomePage";
 import Login from "./component/Login";
+import Notes from "./component/Notes";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
