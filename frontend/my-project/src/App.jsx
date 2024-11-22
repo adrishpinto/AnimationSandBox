@@ -13,9 +13,7 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/Animation" element={<Animation />} />
-          <Route path="/Login" element={<Login />} />
+          <Route path="/" element={<Animation />} />
         </Routes>
       </BrowserRouter>
     </>
