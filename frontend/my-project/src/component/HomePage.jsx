@@ -122,7 +122,7 @@ function Animation() {
   };
 
   return (
-    <div className="px-40 py-10">
+    <div className="md:px-40 md:py-10">
       <div className={`w-full border border-black h-[500px] relative`}>
         <motion.div
           className={`border-2 border-black absolute`}

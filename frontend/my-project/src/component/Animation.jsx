@@ -128,9 +128,11 @@ function Animation() {
   const [grid, setGrid] = useState(1);
 
   return (
-    <div className="px-40 py-10 ">
-      <h1 className="text-center text-4xl font-bold">Animation SandBox</h1>
-      <div className="text-center text tracking-tight mx-auto leading-[15px] mb-2 w-[50%]">
+    <div className="md:px-40 md:py-10 ">
+      <h1 className="text-center text-4xl font-bold leading-8">
+        Animation SandBox
+      </h1>
+      <div className="text-center text tracking-tight mx-auto leading-[15px] mb-2 w-[90%] sm:w-[50%]">
         Press Enter to submit all changes, other wise you can apply specific
         values under each Section, Animations will be toggled on apply while
         attributes will be re-applied.{" "}
@@ -170,7 +172,7 @@ function Animation() {
         {/* Attributes */}
         <div>
           <h1 className="text-2xl font-light mb-2">Attributes</h1>
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap  gap-4 items-center justify-center sm:justify-start">
             <div className="flex items-center border border-slate-500 pl-2 w-44">
               <div>Height:</div>
               <input
@@ -227,7 +229,7 @@ function Animation() {
         {/* Color start */}
         <div>
           <h1 className="text-2xl font-light mb-2 mt-4">Color</h1>
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-4">
             <div className="flex items-center border border-slate-500 pl-2 w-44">
               <div>Color:</div>
               <input
@@ -311,7 +313,7 @@ function Animation() {
         {/* Transform start */}
         <div>
           <h1 className="text-2xl font-light mb-2 mt-4">Transform</h1>
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-4">
             <div className="flex items-center border border-slate-500 pl-2 w-44">
               <div>X:</div>
               <input
@@ -392,7 +394,7 @@ function Animation() {
         {/* Scale start */}
         <div>
           <h1 className="text-2xl font-light mb-2 mt-4">Scale</h1>
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-4">
             <div className="flex items-center border border-slate-500 pl-2 w-44">
               <div>Initial:</div>
               <input
@@ -436,7 +438,7 @@ function Animation() {
         {/* border start*/}
         <div className="mt-8">
           <h1 className="text-2xl font-light mb-2">Border</h1>
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-4">
             {/* Border Color */}
             <div className="flex items-center border border-slate-500 pl-2 w-44">
               <div>Color:</div>
@@ -494,35 +496,38 @@ function Animation() {
         {/* Other Start */}
         <div className="mt-8">
           <h1 className="text-2xl font-light mb-2">Other</h1>
-          <button
-            onClick={() => setIsSticky((prev) => !prev)}
-            className={` w-44  border-2 py-1 text-sm font-semibold rounded-2xl hover:bg-slate-500 hover:bg-opacity-20 ${
-              isSticky ? "border-green-600" : "border-red-500 border-2"
-            }`}
-          >
-            {isSticky ? "Sticky On" : "Sticky off"}
-          </button>
-
-          <button
-            onClick={() => setGrid((prev) => !prev)}
-            className={` w-44  border-2 py-1 text-sm font-semibold rounded-2xl ml-5 hover:bg-slate-500 hover:bg-opacity-20 ${
-              grid ? "border-green-600" : "border-red-500 border-2"
-            }`}
-          >
-            {grid ? "Grid On" : "Grid off"}
-          </button>
+          <div className="flex flex-row flex-wrap gap-4 items-center justify-center sm:justify-start w-fit">
+            <button
+              onClick={() => setIsSticky((prev) => !prev)}
+              className={` w-44  border-2 py-1 text-sm font-semibold rounded-2xl hover:bg-slate-500 hover:bg-opacity-20 ${
+                isSticky ? "border-green-600" : "border-red-500 border-2"
+              }`}
+            >
+              {isSticky ? "Sticky On" : "Sticky off"}
+            </button>
+            <button
+              onClick={() => setGrid((prev) => !prev)}
+              className={` w-44  border-2 py-1 text-sm font-semibold rounded-2xl  hover:bg-slate-500 hover:bg-opacity-20 ${
+                grid ? "border-green-600" : "border-red-500 border-2"
+              }`}
+            >
+              {grid ? "Grid On" : "Grid off"}
+            </button>
+          </div>
         </div>
 
         {/* Other end */}
-        <button
-          onClick={async () => {
-            await tcancel();
-            submit();
-          }}
-          className="mt-5 border-black border w-44 py-1 text-sm font-semibold rounded-2xl hover:bg-slate-500 hover:bg-opacity-20"
-        >
-          SUBMIT
-        </button>
+        <div className="flex items-center justify-center sm:justify-start">
+          <button
+            onClick={async () => {
+              await tcancel();
+              submit();
+            }}
+            className="mt-5 border-black border w-44 py-1 text-sm font-semibold rounded-2xl hover:bg-slate-500 hover:bg-opacity-20"
+          >
+            SUBMIT
+          </button>
+        </div>
       </div>
     </div>
   );
